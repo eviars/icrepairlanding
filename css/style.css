@@ -1311,7 +1311,7 @@ footer .navigation {
 }
 
 /* настройки для широких экранов */
-@media (min-width: 1460px) {
+@media (min-width: 1600px) {
 	header,.navigation {
 		padding: 0%;
 		margin: 0%;
