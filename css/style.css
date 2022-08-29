@@ -1311,7 +1311,7 @@ footer .navigation {
 }
 
 /* настройки для широких экранов */
-@media (min-width: 1420px) {
+@media (min-width: 1460px) {
 	header,.navigation {
 		padding: 0%;
 		margin: 0%;
@@ -1328,7 +1328,7 @@ footer .navigation {
 		background-position: center;
 	}
 	.about-company {
-		width: 1355px;
+		max-width: 1440px;
 		align-items: flex-start;
 		padding: 0px;
 		margin: 17.4em auto auto;
@@ -1340,7 +1340,7 @@ footer .navigation {
 		margin-top: 2.3em;
 	}
 	.projects {
-		width: 1355px;
+		max-width: 1440px;
 		margin: 108px auto auto;
 		justify-content: space-between;
 	}
@@ -1357,7 +1357,7 @@ footer .navigation {
 		margin-left: 0px;
 	}
 	.repair-photo {
-		width: 1352px;
+		max-width: 1440px;
 	}
 	.styles {
 		padding-left: 0px;
