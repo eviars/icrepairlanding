@@ -1,0 +1,1390 @@
+/* сброс отступов, стилей по умолчанию для ссылок и кнопок */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a,button {
+	all:unset;
+}
+/* стили при наведении на кнопки */
+button:hover, .video button:hover {
+	cursor: pointer;
+}
+/* стили при нажатии на кнопки */
+button:active,.order-buttons button:first-child:active,.order-buttons .non-active:active {
+	background: #ad8c56;
+}
+/* стили при наведении и нажатии ссылок */
+a:hover {
+	color: #E3B873;
+	cursor: pointer;
+}
+a:active {
+	color: #E3B873;
+	cursor: pointer;
+}
+.phone:hover {
+	color: #E3B873;
+	cursor: pointer;
+	text-decoration: underline #E3B873;
+}
+/* покраска текста в желтый */
+.yellow {
+	color: #E3B873;
+}
+/* стилизация кнопки */
+button {
+	background: #E3B873;
+	color:#FFFFFF;
+	box-shadow: 0px 5px 15px 0px #E3B87333;
+	border-radius: 2px;
+	font-style: italic;
+	font-weight: 400;
+}
+/* общая разметка и стилизация */
+body {
+	font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	display: grid;
+	grid-template-rows: 83px 7282.54px 113px;
+}
+/* стилизация заголовков */
+h1,h2,h3,h4,h5 {
+	font-weight: 400;
+	font-family: 'Yeseva One', cursive;
+}
+h1 {
+	font-size: 40px;
+	line-height: 53px;
+}
+h2 {
+	font-size: 27px;
+	line-height: 37px;
+	letter-spacing: -2px;
+}
+h3 {
+	font-size: 18px;
+}
+h4 {
+	font-size: 20px;	
+}
+h5 {
+	font-size: 17px;
+}
+/* стилизация шапки */
+header,footer {
+	background:#131313;
+	display: flex;
+	justify-content: center;
+	font-size: 11px;
+}
+/* стилизация контента в шапке */
+.navigation {
+	width: 100vw;
+	display: grid;
+	grid-template-areas: 
+	"logo menu phone button";
+	}
+.phone {
+	grid-area: phone;
+	padding-left:0.21vw;
+	}
+.logo {
+	grid-area: logo;
+	padding-left: 5.1vw;	
+}
+nav {
+	grid-area: menu;
+	padding-left: 5.5vw;	
+}
+.button {
+	grid-area: button;
+	padding-right: 2.05vw;
+}
+.button button {
+	padding: 11px 35px;
+}
+.phone,.logo,nav,.button {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 3px;
+}
+/* список в навигационное меню */
+nav ul,.projects-photo ul {
+	list-style: none;
+	display: flex;
+}
+nav li {
+	padding-right: 3.8vw;
+}
+/* разметка и стилизация основного контента */
+main {
+	display: grid;
+	grid-template-rows: 707px 1074px 725px 1851.53px 864px 1107.11px 953.9px
+}
+/* 1 секция О компании */
+section:nth-of-type(1) {
+background-image: url(../img/main.jpg);
+background-size: cover;
+display: flex;
+justify-content: center;
+align-content: center;
+}
+/* прозрачный наложенный фон */
+.overlay{
+	background: hsla(0, 0%, 0%, 0.7);
+	width: 100%;
+	height: 100%;
+}
+/* контейнер 1 блока с текстом и кнопками */
+.about-company {
+	display: flex;
+	flex-direction: column;
+	padding: 13.7vw 0px 0px 9.62vw;
+}
+/* текст 1 блока */
+.about-company p {
+	font-size: 22px; 
+	margin-top: 1.2vw; 
+	line-height: 36px;
+}
+/* переносы текста и блоки только для экранной версии */
+.mobile-break,.mobile-block {
+	display: none;
+}
+.desktop-break {
+	display: contents;
+}
+.desktop-block {
+	display: flex;
+}
+/* кнопки заказа для первого блока */
+.order-buttons {
+	display: flex;
+	margin-top: 1.79vw;
+}
+/* первая кнопка */
+.order-buttons button:first-child {
+	padding: 17px 44.5px;
+}
+/* вторая кнопка */
+.non-active {
+	padding: 17px 29.1px;
+	margin-left: 19.8px;
+	border: solid 1px #FFFFFF; 
+	background: none;
+}
+	/* эффекты при наведении */
+.order-buttons:hover button{
+	border: solid 1px #FFFFFF; 
+	background: none;
+}
+.order-buttons button:hover {
+	border: none;
+	background: #E3B873;
+}
+/* 2 секция */
+section:nth-of-type(2) {
+	background: #131313;
+}
+/* стилизация меню слайдера в обычном состоянии и при наведении */
+.projects li {
+	font-family: 'Yeseva One', cursive;
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 53px;		
+}
+.projects li:hover,.projects li:focus {
+	color: #E3B873;
+	text-decoration: underline;
+	text-underline-offset: 10px;
+}
+/* расстояния между элементами меню слайдера */
+.projects li:nth-of-type(-n+2) {
+padding-right: 62px;
+}
+.projects-info p {
+	font-size: 13px;
+	line-height: 21px;
+	padding-top: 10px;
+}
+.projects-text>p {
+	font-size: 14px;
+	line-height: 27px;
+	letter-spacing: -0.05px;
+	padding-top: 25px;
+}
+.projects1pic {
+	width: 679px;
+}
+.projects2pic,.mobilebutton {
+	display: none;
+}
+.projects {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	margin-top: 108px;
+}
+.projects-text,.projects-photo {
+	display: flex;
+	flex-direction: column;
+}
+.projects-text {
+	margin: 65px -131px 0px 0px;
+	padding-left: 40px;
+}
+.projects-info {
+	margin-top: 51px;
+	display: grid;
+	grid-template: 1fr 1fr/0.6fr 1fr;
+	gap: 36px 44px;
+}
+/* стилизация навигации для фото-слайдера (стрелки и точки) */
+.nav-arrows {
+	display: flex;
+	align-items: center;
+	padding-top: 30px;	
+}
+.nav-arrows img:hover {
+	cursor: pointer;
+}
+.nav-arrows img:first-child {
+	padding: 30px 29px 0px 0px;
+}
+.nav-arrows img:last-child {
+	padding: 30px 0px 0px 29px;
+}
+.round {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.3);
+	margin-top: 34px;
+}
+.round:nth-of-type(-n+2) {
+	margin-right: 17px;
+}
+.round:hover {
+	background: #FFFFFF;
+	cursor: pointer;
+}
+.round:active {
+	background: #FFFFFF;
+}
+/* 3 секция */
+.control {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 44px;
+}
+.control h4 {
+	font-size: 20px;
+	margin: -324px 0px 15px;	
+}
+/* имитация видео */
+.video {
+	background-image: url(../img/video.jpg);
+	background-size: cover;
+	width: 817px;
+	height: 434px;
+	display: flex;
+	justify-content: center;
+	margin: -225px auto auto 312px;
+	box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.15);
+}
+.overlay-item {
+	background: rgba(0, 0, 0, 0.8);
+	width: 817px;
+	height: 434px;
+}
+.video button {
+	all: unset; 
+	align-self: center;
+	justify-self: center;
+	position: absolute;
+	z-index: 1;
+	padding-top: 10px;
+}
+/* стилизация текста под видео */
+.text-control {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: -208px;
+}
+.text-control hr {
+	background: #E3B873; 
+	width: 55px;
+	height: 1.5px;
+	margin: 270px 0px 0px 40px;
+	border: none;
+	border-radius: 30px;
+}
+.text-control p {
+	font-size: 18px;
+	font-weight: 400;
+	color: #363636;
+	text-align: center;
+	line-height: 37px;
+	padding: 28px 0px 0px 44px;	
+}
+/* форма подписки */
+.submit {
+	display: flex;
+	justify-content: center;
+}
+.formquestion {
+	display: flex;
+	flex-direction: row;
+	margin: 71px 0px 0px 41px;
+}
+.formquestion div:nth-of-type(-n+2) {
+	display: flex;
+	flex-direction: column;
+	width: 231px;
+}
+.formquestion div:nth-of-type(2) {
+	margin: 0px 50px 0px 57px;
+}
+.submit button {
+	width: 200px;
+	height: 46px;
+	text-align: center;
+	font-size: 11.5px;
+	letter-spacing: 1px; 
+	font-style: normal;
+	padding-top: 5px;
+	margin-top: 10px;
+}
+.formquestion input {
+	border: none;
+	border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+	width: 231px;
+	color: #131313;
+	padding: 1px 0px 6px 0px;
+	font-size: 14px;
+	font-family: 'Nunito Sans', Helvetica, Arial, sans-serif; 
+}
+.formquestion input::placeholder {
+	color: #363636;
+	opacity: 1;
+}
+.formquestion label {
+	color: rgba(54, 54, 54, 0.5);
+	font-size: 13px;
+	font-family: 'Nunito Sans', Helvetica, Arial, sans-serif; 
+	padding-top: 12px;
+}
+/* стилизация чекбокса */
+.checkbox {
+	margin: 35px 0px 0px 37px;	
+	display: flex;
+	justify-content: center;
+}
+#terms {
+	height: 18px;
+	width: 18px;
+	display: inline-block;
+	text-align: end;
+	margin-top: -2px;
+	opacity: 0;	
+}
+#terms-label{
+	color: #181818;
+	font-size: 14px;
+	padding: 0px 0px 0px 10px;
+	position: relative;
+}
+.checkbox label::before {
+	content: "";
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+	background: #E3B873;
+	position: absolute;
+	margin: -2px 0px 0px -28px;
+}
+.checkbox label::after {
+	content: "";
+	display: inline-block;
+	height: 3px;
+	width: 7px;
+	border-left: 2px solid #FFFFFF;
+	border-bottom: 2px solid #FFFFFF;
+	border-radius: 1px;
+	transform: rotate(-45deg);
+	position: absolute;
+	left: -13px;
+	top: 3.5px;
+}
+.checkbox input[type="checkbox"] + label::after {
+	content: none;
+}
+.checkbox input[type="checkbox"]:checked + label::after {
+	content: "";
+}
+/* 4 секция */
+.repair-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #181818;
+	margin: 54px 0px 0px 36px;
+}
+.repair-text img {
+	margin-top: 16px;
+}
+.repair-photo {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 1236px;
+	justify-content: space-between;
+	margin-top: 15px;
+}
+.repair-list {
+	position: relative;
+	z-index: 1;
+	background: #FFFFFF;
+	box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+	width: 330px;
+	height: 286px;
+	margin: -128px auto auto;	
+}
+.repair-list h3 {
+	padding-left: 35px;	
+}
+.repair-list ul {
+	padding-left: 51px;
+}
+.repair-list h3 {
+	padding-top: 25px;
+	margin-bottom: 10.5px;
+	color: #363636;
+}
+.repair-list li::marker {
+	font-size: 14px;
+}
+.repair-list li {
+	font-size: 13px;
+	line-height: 26.5px;
+	color: #959595;
+	text-indent: -7px;
+	letter-spacing: -0.15px;	
+}
+/* исправляет баг с text-indent в mozilla */
+@-moz-document url-prefix() {
+	.repair-list li {
+		text-indent: -3.5px;
+	}
+}
+.prices {
+	width: 228px;
+	height: 54px;
+	background: #E3B873;
+	box-shadow: 5px 5px 10px 0px #E3B8734D;	
+	position: relative;
+	z-index: 2;
+	margin: -26px 0px 0px 34px;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	color:#FFFFFF;
+}
+/* второй блок 4 секции, преимущества и форма подписки */
+div.desktop-block:nth-of-type(2) {
+	display: flex;
+	flex-flow: row nowrap;
+	margin-top: 126px;
+}
+.benefits {
+	background-image: url(../img/benefits.jpg);
+	background-size: cover;
+	width: 703px;
+	height: 645px;
+	display: flex;
+	justify-content: center;
+	font-size: 14px;
+	color: #363636;
+}
+.benefits ol {
+	list-style: none;
+	margin: 107px 0px 0px 165px;
+}
+.benefits li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 86px;
+}
+.benefits li div {
+	width: 58px;
+	height: 58px;
+	border-radius: 50%;
+	background: #E3B873;
+  border: 8px solid #FFFFFF;
+	box-shadow: 0px 5px 15px 0px rgba(227, 184, 115, 0.15);
+	color: #FFFFFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 8px;	
+}
+/* форма подписки */
+.desktop-block>form {
+	background: #131313;
+	width: 506px;
+	height: 509px;
+	margin: 106px 0px 0px 131px;
+}
+.desktop-block>form p {
+	text-align: center;
+	font-size: 18px;
+	margin: 27px 0px 30px;
+	line-height: 26px;
+}
+.free-request {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 408px;
+	font-family: 'Nunito Sans', Helvetica, Arial, sans-serif; 
+	font-weight: 400;
+	margin: 34px 0px 0px 49px;
+}
+.free-request label {
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 13px;
+}
+.free-request input {
+	background: none;
+	border: none;
+	border-bottom: 0.7px solid rgba(255, 255, 255, 0.5);
+	width: 408px;
+	font-size: 14px;
+	padding: 6px 0px 8px;
+	margin-bottom: 49px;
+	color: #FFFFFF;
+}
+.free-request input::placeholder {
+	color: #FFFFFF;
+	opacity: 1;
+}
+.measure-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 213px;
+	height: 51px;
+	font-size: 13px;
+	margin-left: 244px;
+}
+/* чекбокс */
+.checkbox-measure {
+	font-size: 14px;
+	margin: -32px 0px 37px 51px;
+}
+.checkbox-measure label {
+	padding-left: 7px;
+}
+.checkbox-measure input {
+	opacity: 0;
+}
+.checkbox-measure label::before {
+	content: "";
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+	background: #E3B873;
+	position: absolute;
+	margin-left: -26px;
+	margin-top: -2px;
+}
+.checkbox-measure label::after {
+	content: "";
+	display: inline-block;
+	height: 3px;
+	width: 7px;
+	border-left: 2px solid #FFFFFF;
+	border-bottom: 2px solid #FFFFFF;
+	border-radius: 1px;
+	transform: rotate(-45deg);
+	position: absolute;
+	margin-left: -280.5px;
+	margin-top: 3px;
+}
+.checkbox-measure input[type="checkbox"] + label::after {
+	content: none;
+}
+.checkbox-measure input[type="checkbox"]:checked + label::after {
+	content: "";
+}
+/* блок с копилкой */
+.pig {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: flex-end;
+	margin: -3px 223px 0px 0px;
+}
+.pig p {
+	color: #E3B873;
+	font-size: 18px;
+	margin: -18px 0px 0px 5px;
+}
+/* 5 секция */
+section:nth-of-type(5) {
+	background-image: url(../img/design.jpg);
+	background-color: rgba(0, 0, 0, 0.70);
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: multiply;
+}
+.styles {
+	display: flex;
+	justify-content: center;
+	padding-left: 40px;
+}
+.styles h2 {
+	margin: 134px 0px 31px;
+	display: flex;	
+	letter-spacing: 0px;
+}
+.styles ul {
+	list-style: none;
+	font-size: 20px;
+}
+.styles li {
+	line-height: 49.35px;
+}
+.styles li:hover {
+	color: #E3B873;
+	text-decoration: 1px underline;
+	text-underline-offset: 8px;
+}
+.styles-photo {
+	display: flex;
+	flex-direction: row;
+	margin-left: 212px;
+}
+.styles-photo div {
+	display: flex;
+	flex-direction: column;
+}
+.styles-photo div:first-child {
+	margin: -41px 43px 0px 0px;
+}
+.styles-photo div:last-child {
+	margin-top: -113px;
+}
+.styles-photo div img:first-child {
+	margin-bottom: 38px;
+}
+/* 6 секция отзывы */
+section:nth-of-type(6) {
+	background-image: url(../img/building.png);
+	background-position: bottom;
+	background-repeat: repeat-x;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+section:nth-of-type(6) h4 {
+	color: #181818;
+	margin: 110px 0px 15px 41px;
+}
+section:nth-of-type(6)>img {
+	width: 114px;
+	margin-left: 41px;
+}
+section:nth-of-type(6)>p {
+	text-align: center;
+	margin: 20px 0px 0px 41px;
+	line-height: 30px;
+	font-size: 18px;
+	color: #363636;
+}
+.reviews {
+	display: flex;
+	flex-flow: row nowrap;
+	margin-left: 42px;
+}
+.review-block {
+	background: #FFFFFF;
+	box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.04);
+	width: 376px;
+	height: 428px;
+	margin-top: 39px;
+}
+.review-block:nth-of-type(n+2) {
+	margin-left: 54px;
+}
+.review-block>img {
+	margin: 24px 24px 0px 20px;
+	float: left;
+}
+.review-block h3 {
+	color: #181818;
+	margin-top: 40px;
+	line-height: 23px;
+}
+.review-block p {
+	font-size: 13px;
+	color: #959595;
+	width: 324px;
+	line-height: 23.4px;
+	margin: 20px 0px 0px 20px;
+}
+.apartment-info {
+	height: 54px;
+	width: 293.75px;
+	background: #E3B873;
+	box-shadow: 5px 5px 20px 0px rgba(227, 184, 115, 0.5);
+	margin-top: 70px;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+.apartment-info img:nth-of-type(1) {
+	margin-left: 18px;
+}
+.apartment-info img:nth-of-type(n+2) {
+	margin-left: 14px;
+}
+.apartment-info h5:nth-of-type(1) {
+	margin-left: 15px;
+}
+.apartment-info h5:nth-of-type(2) {
+	margin-left: 12px;
+}
+/* 7 секция контакты */
+section:nth-of-type(7) {
+	background-image: url(../img/mapbackground.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.overlay-special {
+	background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%);
+	width: 100%;
+	height: 100%;
+}
+/* форма подписки */
+.questions {
+	width: 883px;
+	height: 445.3px;
+	background: #181818;
+	margin: -1178px 0px 0px 289px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.questions h4 {
+	margin-top: 35px; 
+}
+.questions .free-request {
+	width: 520px;
+	flex-flow: row wrap;
+	margin: 50px 0px 0px;
+}
+.questions .free-request div:nth-of-type(1) {
+	margin-right: 56px;	
+}
+.questions .free-request>div:nth-of-type(-n+3) {
+	display: flex;
+	flex-direction: column;
+}
+.questions .free-request>div:nth-of-type(5) {
+	width: 520px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.questions .free-request label {
+	margin-bottom: -2px;
+}
+.questions .free-request div:nth-of-type(-n+2)>input {
+	width: 231px;
+	border-bottom: 0.3px solid rgba(255, 255, 255, 0.2);
+}
+.questions .free-request div:nth-of-type(3)>input {
+	width: 520px;
+	border-bottom: 0.3px solid rgba(255, 255, 255, 0.2);
+}
+/* чекбокс */
+.questions .checkbox-measure {
+	width: 520px;
+	margin: -7px 0px 47px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.questions .checkbox-measure label {
+	font-size: 14px;
+	color: #FFFFFF; 
+	padding-left: 8px;
+}
+.questions .checkbox-measure input {
+	opacity: 0;
+	width: 18px;
+	height: 18px;
+	margin-bottom: 3px;
+}
+.questions .measure-button {
+	font-style: normal;
+	justify-self: center; 
+	margin: 0px;
+	width: 200px;	
+}
+/* адрес */
+.addres h4 {
+	text-align: center;
+	margin: 51px 0px 0px 38px;
+	line-height: 28px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+/* ссылки на контакты */
+.contacts {
+	display: flex;
+	justify-content: center;
+	margin: 23px 0px 0px 49px;
+}
+.contacts img {
+	width: 28px;
+	height: 28px;
+}
+.contacts img:first-child {
+	margin-right: 15px;
+}
+/* карта для экранной версии */
+section:nth-of-type(7) .desktop-block {
+	display: flex;
+	justify-content: center;
+	margin: 39px auto auto 34px;
+}
+/* подвал сайта */
+footer {
+	border-top: 1px solid #000000;
+}
+footer .navigation {
+	padding-top: 18px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+	@font-face {
+		font-family: 'Nunito Sans Regular';
+		src: url(../fonts/NunitoSans-Regular.ttf);
+	}
+	@font-face {
+		font-family: 'Nunito Sans Italic';
+		src: url(../fonts/NunitoSans-Italic.ttf);
+	}
+	@font-face {
+		font-family: 'Yeseva One';
+		src: url(../fonts/YesevaOne-Regular.woff);
+	}	
+	body {
+	display: grid;
+	grid-template-rows: 57px 5254px 0px;
+	background:#181818;
+	}
+	/* переносы текста */
+	.mobile-break {
+		display: contents;
+	}
+	.mobile-block {
+		display: flex;
+	}
+	/* скрыть десктопные элементы */
+	nav,.button,.desktop-button,.projects ul,.projects1pic,.nav-arrows,.desktop-block,section:nth-of-type(7) .desktop-block,div.desktop-block:nth-of-type(2),.desktop-break,section:nth-of-type(n+5):nth-child(-n+6),.overlay-special,footer {
+		display: none;
+	}
+	/* стилизация строки навигации */
+	.navigation {
+		display: flex;
+		justify-content: space-between;		
+	}
+	.logo {
+		padding-left: 0%;
+		justify-self: flex-start;		
+	}
+	.phone {
+		padding-right: 0%;
+		justify-self: flex-end;
+	}
+	/* разметка основного контента страницы */
+	main {
+		display: grid;
+		grid-template-rows: 476px 707px 846px 2030px 0px 0px 1195px;
+	}	
+	/* 1 секция */
+	section:nth-of-type(1) {
+	background-image: url(../img/main-mobile.jpg);
+	background-position: center;
+	}
+	/* заголовки */
+	h1 {
+		font-size: 23px;
+		line-height: 31px;
+		margin-bottom: 12px;
+	}
+	h2 {
+		font-size: 22px;
+		line-height: 30px;
+	}
+	h4 {
+		font-size: 22px;
+	}
+	.about-company {
+		padding: 83px 0px 0px;
+		margin: auto;
+		align-items: center;
+		width: 340px;
+	}
+	.about-company h1 {
+		align-self: flex-start;
+	}	
+	.about-company>p {
+		font-size: 14px;
+		line-height: 19px;
+	}	
+	.navigation,.projects {
+		padding-left: 4.80vw;
+		padding-right: 4.80vw;
+	}
+	/* кнопки заказа в 1 секции */
+	.order-buttons {
+		display: flex;
+		flex-direction: column;
+		margin-top:50px;
+	}
+	.order-buttons button {
+		display: flex;
+		justify-content: center;
+		margin: 0px;
+		width: 249px;
+	}	
+	/* 1 кнопка */
+	.order-buttons button:first-child {
+		margin-bottom:27px;
+	}
+	/* 2 кнопка */
+	.non-active {
+		padding: 17px 43.5px; 
+	}
+	/* 2 секция */
+	header, section:nth-of-type(2) {
+		background-color: #181818;
+	}	
+	.projects {
+		margin-top: 34px;
+		justify-content: center;
+	}
+	.projects-text {
+		margin: 0%;
+		padding: 0%;
+	}
+	.projects h2 {
+		display: flex;
+		align-self: center;
+		text-align: center;
+	}
+	.projects-text>p {
+		font-size: 11px;
+		line-height: 17px;
+		display: flex;
+		align-self: center;
+		text-align: center;
+		padding-top: 29px;
+	}
+	.projects2pic {
+		display: flex;
+		width: 340px;
+		align-self: center;
+		padding-top: 72px;
+		position: relative;
+	}
+	.mobilebutton {
+		display: flex;
+		flex-direction: row;
+		align-self: center;
+		justify-content: space-between;
+		padding-top: 315px;
+		position: absolute;
+		width: 313px;
+	}
+	.mobilebutton button {
+		background: none;
+		border: none;
+		box-shadow: none;
+		position: relative;
+		z-index: 1;
+		display: flex;
+	}
+	.mobilebutton button:focus, .video button:focus {
+		filter: saturate(150%);
+	}
+	.projects-info {
+		margin-top: 35px;
+		gap: 34px 55px; 
+	}
+	.projects-info h3 {
+		font-size: 13px;
+		line-height: 21px;
+	}
+	.projects-info p {
+		font-size: 11px;
+		line-height: 15px;
+	}
+	/* 3 секция */
+	.control {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0px 0px 41px;
+	}
+	.control h4 {
+		font-size: 22px;
+		margin: 20px 0px;
+	}	
+	.video,.overlay-item {
+		width: 340px;
+		height: 207px;
+		margin: auto;
+	}
+	.video button {
+		scale: 0.45;
+	}
+	.text-control hr {
+		margin: 234px auto auto;
+		height: 1.5px;
+		border-radius: 30px;
+		box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.64) inset;
+		-webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.64) inset;
+		-moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.64) inset;
+	}
+	.text-control p{
+		padding: 21px 0px 0px;
+		font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+		font-size: 11px;
+		line-height: 19px;
+		color: #FFFFFF;
+		margin: 0px 17.5px 0px;
+	}
+	.formquestion {
+		margin: 62px 0px 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 340px;
+	}
+	.formquestion label {
+		color: rgba(255, 255, 255, 0.5);
+	}
+	.formquestion div:nth-of-type(2) {
+		margin: 51px auto auto 0px;
+	}
+	.formquestion input {
+		background: none;
+		border-bottom: 1px solid #FFFFFF;
+		width: 340px;
+		color: #FFFFFF;
+	}
+	.formquestion input::placeholder {
+		color: #FFFFFF;
+		opacity: 1;
+	}
+	.checkbox {
+		margin: 0%;
+		margin-top: -130px;
+		justify-content: flex-start;
+	}
+	#terms-label {
+		color: #FFFFFF;
+	}
+	.formquestion button {
+		margin-top: 107px;
+		width: 340px;
+		position: relative;
+		z-index: 1;
+	}
+	/* 4 секция */
+	section:nth-of-type(4) {
+		background: #FFFFFF;
+	}
+	.repair-text {
+		margin: 84px auto auto;
+	}	
+	.repair-photo {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 340px;
+		margin-top: 24px;
+	}
+	.repair-list {
+		width: 270px;
+		height: 241px;
+		margin: -142px 0px 0px -1px;
+	}
+	.repair-list li {
+		text-indent: -4px;	
+	}
+	@-moz-document url-prefix() {
+		.repair-list li {
+			text-indent: -2px;
+		}
+	}
+	.repair-list>h3,.prices h3 {
+		font-size: 15px;
+	}
+	.repair-list h3 {
+		padding: 21px 0px 0px 32px;
+	}
+	.repair-list li {
+		line-height: 21.4px;
+	}
+	.prices {
+		width: 190.43px;
+		height: 40px;
+		margin: -21px 0px 44px;
+	}
+	/* только для мобильной версии */
+	div.mobile-block {
+		flex-direction: column;
+		align-items: center;
+	}
+	.mobile-block h2 {
+		text-align: center;
+		margin: 9px 0px 31px;
+		line-height: 31px;
+		letter-spacing: 0px;
+	}
+	.mobile-block>img {
+		width: 340px;
+	}
+	.mobile-block>.mobilebutton {
+		padding-top: 205px;
+	}
+	.questions,.questions .free-request,.questions .measure-button,.free-request>div:nth-of-type(-n+4),.questions .free-request div:nth-of-type(-n+3)>input {
+		width: 340px;
+	}
+	/* 7 секция */
+	.questions .free-request div:nth-of-type(1) {
+		margin-right: 0px;
+	}
+	.questions {
+		background: none;
+		margin: 138px auto auto;
+	}
+	.questions h4 {
+		font-size: 20px;
+		margin-bottom: 3px;
+	}
+	.questions .free-request div:nth-of-type(-n+3)>input {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.8)
+	}
+	.questions .free-request div {
+		margin-bottom: 12px;
+	}
+	.questions .checkbox-measure {
+		justify-content: flex-start;
+		margin-top: -39px;
+	}
+	.questions .measure-button {
+		margin-top: 45px;
+	}
+	section:nth-of-type(7) img:nth-of-type(1) {
+		margin-top: 133px;
+	}
+	.addres h4 {
+		font-size: 18px;
+		margin: 39px auto auto;
+		line-height: 25.5px;
+	}
+	.contacts img {
+		width: 39px;
+		height: 39px;
+	}
+	.contacts img:first-child {
+		margin-right: 20px;
+	}
+	.contacts {
+		margin: -113px auto auto 20px;
+	}
+}
+
+/* настройки для планшетов */
+@media (min-width: 769px) and (max-width: 1200px) {
+	header,.navigation {
+		padding: 0%;
+		margin: 0%;
+		justify-content: center;
+	}
+	.navigation {
+		width: 85%;
+		justify-content: space-around;
+	}
+	.logo,.button,nav,.phone {
+	padding: 0%;
+	}
+	nav>ul>li {
+		padding-right: 3.8vw;
+	}
+	.projects-text,.text-control p {
+		padding-left: 0%;
+	}
+	.control,.text-control hr,.formquestion,.checkbox,.repair-text,.desktop-block>form {
+		margin-left: 0%;
+	}
+	section:nth-of-type(6) h4,section:nth-of-type(6)>img,section:nth-of-type(6)>p,.reviews {
+		margin-left: 0px;
+	}
+	.review-block:nth-of-type(n+2) {
+		margin-left: 2vw;
+	}
+	.repair-photo {
+		justify-content: space-evenly;
+	}
+	.projects-photo {
+		margin-left: 58px;
+	}
+	.video {
+		margin: -225px auto auto;
+	}
+	.questions {
+		margin: -1178px auto auto;
+	}
+	.addres h4,.addres .contacts,section:nth-of-type(7)>.desktop-block {
+		margin-left: 0px;
+	}
+}
+/* настройки для нетбуков */
+@media (min-width: 1201px) and (max-width: 1370px) {
+	.navigation {
+		width: 95vw;
+	}
+	.button {
+		padding-right: 0px;
+	}
+	.desktop-block>form {
+		margin: auto;
+	}
+	.repair-text,.control,.text-control hr,.formquestion,.checkbox {
+		margin-left: 0px;
+	}
+	.repair-text,.repair-photo {
+		width: 100vw;
+		justify-content: space-evenly;
+	}
+	.styles,.logo,.text-control p {
+		padding-left: 0px;
+	}
+	.projects-text {
+		padding-left: 0px;
+		margin-right: -77px;
+	}
+	.styles-photo {
+		margin-left: 92px;
+	}
+	.video {
+		margin-left: auto;
+	}
+	section:nth-of-type(6) h4,section:nth-of-type(6)>img,section:nth-of-type(6)>p,.reviews {
+		margin-left: 0px;
+	}
+	.review-block:nth-of-type(n+2) {
+		margin-left: 2vw;
+	}
+	.questions {
+		margin: -1178px auto auto;
+	}
+	.addres h4,.addres .contacts,section:nth-of-type(7)>.desktop-block {
+		margin-left: 0px;
+	}
+}
+
+/* настройки для широких экранов */
+@media (min-width: 1420px) {
+	header,.navigation {
+		padding: 0%;
+		margin: 0%;
+		justify-content: center;
+	}
+	.navigation {
+		column-gap: 73px;
+	}
+	nav>ul>li {
+		padding-right: 2.4vw;
+	}
+	section:nth-of-type(1) {
+		align-items: center;
+		background-position: center;
+	}
+	.about-company {
+		width: 1355px;
+		align-items: flex-start;
+		padding: 0px;
+		margin: 17.4em auto auto;
+	}
+	.about-company p {
+		margin-top: 0.8em;
+	}
+	.order-buttons {
+		margin-top: 2.3em;
+	}
+	.projects {
+		width: 1355px;
+		margin: 108px auto auto;
+		justify-content: space-between;
+	}
+	.projects-text {
+		padding-left: 0%;
+	}
+	.video {
+		margin: -225px auto auto;
+	}
+	.control {
+		margin: auto;
+	}
+	.repair-text,.formquestion,.checkbox,.text-control hr {
+		margin-left: 0px;
+	}
+	.repair-photo {
+		width: 1352px;
+	}
+	.styles {
+		padding-left: 0px;
+	}
+	.styles-photo {
+		margin-left: 317px;
+	}
+	.text-control p {
+		padding-left: 0px;
+	}
+	div.desktop-block:nth-of-type(2) {
+		justify-content: center;
+	}
+	.pig {
+		width: 1210px;
+		margin: -3px auto auto;
+	}
+	section:nth-of-type(6) h4,section:nth-of-type(6)>img,section:nth-of-type(6)>p,.reviews {
+		margin-left: 0px;
+	}
+	.review-block:nth-of-type(n+2) {
+		margin-left: 4vw;
+	}
+	.questions {
+		margin: -1178px auto auto;
+	}
+	.addres h4,.addres .contacts,section:nth-of-type(7) .desktop-block {
+		margin-left: 0px;
+	}
+}
